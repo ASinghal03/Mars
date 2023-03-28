@@ -12,17 +12,15 @@ namespace Mars.Drivers
 {
     public class MarsChromeDriver
     {
-           public IWebDriver driver;
+        public IWebDriver driver;
        
-        public void LoginSteps()
+        public void MarsLoginSteps()
         {
             // Open Web Browser
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
-
-            //Login Page Object Initialization and Definition
-            MarsLoginPage MarsLoginPageObj = new MarsLoginPage();
-            MarsLoginPageObj.MarsLoginActions(driver);
+            MarsLoginPage marsLoginPageObj = new MarsLoginPage();
+            marsLoginPageObj.MarsNavigateToPortal(driver);
         }
     }
 }
