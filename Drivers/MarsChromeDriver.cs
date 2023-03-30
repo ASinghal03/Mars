@@ -7,20 +7,30 @@ using System.Threading.Tasks;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using Mars.Pages;
+using TechTalk.SpecFlow;
 
 namespace Mars.Drivers
 {
     public class MarsChromeDriver
     {
-        public IWebDriver driver;
+         public IWebDriver driver;
+        
        
         public void MarsLoginSteps()
         {
-            // Open Web Browser
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
-            MarsLoginPage marsLoginPageObj = new MarsLoginPage();
+            driver.Navigate().GoToUrl("http://localhost:5000/");
+            MarsLoginPage marsLoginPageObj= new MarsLoginPage();
             marsLoginPageObj.MarsNavigateToPortal(driver);
+           
         }
+        //public void MarsSkillPageSteps()
+        //{
+         //   MarsProfilePage marsProfilePageObj = new MarsProfilePage();
+         //   marsProfilePageObj.MarsAddNewSkill(driver);
+       // }
+
+
     }
 }
