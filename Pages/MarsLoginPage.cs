@@ -17,7 +17,7 @@ namespace Mars.Pages
         
         public void MarsNavigateToPortal(IWebDriver driver)
         {
-            
+            driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("http://localhost:5000/");
             IWebElement marsSignInButton = driver.FindElement(By.XPath("//*[@id=\"home\"]/div/div/div[1]/div/a"));
             marsSignInButton.Click();

@@ -8,7 +8,9 @@
     ".NETCoreApp,Version=v6.0": {
       "Mars/1.0.0": {
         "dependencies": {
+          "Docker.DotNet": "3.125.13",
           "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
+          "EO.WebBrowser": "23.1.45",
           "FluentAssertions": "6.2.0",
           "Microsoft.NET.Test.Sdk": "17.5.0",
           "NUnit3TestAdapter": "4.1.0",
@@ -16,11 +18,13 @@
           "Selenium.WebDriver": "4.8.2",
           "Selenium.WebDriver.ChromeDriver": "111.0.5563.6400",
           "SeleniumExtras.WaitHelpers": "1.0.2",
+          "SimpleAssertThat": "1.0.4",
           "SpecFlow": "3.9.74",
           "SpecFlow.NUnit": "3.9.74",
           "SpecFlow.Plus.LivingDocPlugin": "3.9.57",
           "SpecFlow.Tools.MsBuild.Generation": "3.9.74",
-          "NUnit": "3.13.2"
+          "NUnit": "3.13.3",
+          "xunit.assert": "2.4.2"
         },
         "runtime": {
           "Mars.dll": {}
@@ -34,6 +38,19 @@
           }
         }
       },
+      "Docker.DotNet/3.125.13": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1",
+          "System.Buffers": "4.5.1",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Docker.DotNet.dll": {
+            "assemblyVersion": "3.125.0.0",
+            "fileVersion": "3.125.13.1"
+          }
+        }
+      },
       "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
         "dependencies": {
           "Selenium.WebDriver": "4.8.2"
@@ -42,6 +59,22 @@
           "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll": {
             "assemblyVersion": "3.11.0.0",
             "fileVersion": "3.11.0.0"
+          }
+        }
+      },
+      "EO.WebBrowser/23.1.45": {
+        "runtime": {
+          "lib/EO.Base.dll": {
+            "assemblyVersion": "23.1.45.0",
+            "fileVersion": "23.1.45.0"
+          },
+          "lib/EO.WebBrowser.dll": {
+            "assemblyVersion": "23.1.45.0",
+            "fileVersion": "23.1.45.0"
+          },
+          "lib/EO.WebEngine.dll": {
+            "assemblyVersion": "23.1.45.0",
+            "fileVersion": "23.1.45.0"
           }
         }
       },
@@ -381,14 +414,14 @@
           }
         }
       },
-      "NUnit/3.13.2": {
+      "NUnit/3.13.3": {
         "dependencies": {
           "NETStandard.Library": "2.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/nunit.framework.dll": {
-            "assemblyVersion": "3.13.2.0",
-            "fileVersion": "3.13.2.0"
+            "assemblyVersion": "3.13.3.0",
+            "fileVersion": "3.13.3.0"
           }
         }
       },
@@ -463,6 +496,14 @@
           "Selenium.WebDriver": "4.8.2"
         }
       },
+      "SimpleAssertThat/1.0.4": {
+        "runtime": {
+          "lib/SimpleAssertThat.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "SpecFlow/3.9.74": {
         "dependencies": {
           "BoDi": "1.5.0",
@@ -490,7 +531,7 @@
       },
       "SpecFlow.NUnit/3.9.74": {
         "dependencies": {
-          "NUnit": "3.13.2",
+          "NUnit": "3.13.3",
           "SpecFlow": "3.9.74",
           "SpecFlow.Tools.MsBuild.Generation": "3.9.74"
         },
@@ -528,6 +569,7 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.Buffers/4.5.1": {},
       "System.Collections/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
@@ -1031,6 +1073,18 @@
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {},
+      "xunit.assert/2.4.2": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.1/xunit.assert.dll": {
+            "assemblyVersion": "2.4.2.0",
+            "fileVersion": "2.4.2.0"
+          }
+        }
       }
     }
   },
@@ -1047,12 +1101,26 @@
       "path": "bodi/1.5.0",
       "hashPath": "bodi.1.5.0.nupkg.sha512"
     },
+    "Docker.DotNet/3.125.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-p1DrW2Sw4ND2jFlIvpHB8/pY5o5HIkDalbGAI8tUvqjJR6n0/ubos7kDGWI+Xbx9+L3US3SUR8r59Zwq+ZxBvw==",
+      "path": "docker.dotnet/3.125.13",
+      "hashPath": "docker.dotnet.3.125.13.nupkg.sha512"
+    },
     "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-xc6jVVl5ymgk3ZNWnC/KHxkEup1QpnwYbrwF+NQoCOGERsD8YMlLwmsX4lGhLXCLo/YQTRTIwlKCN9E/doGUNg==",
       "path": "dotnetseleniumextras.waithelpers/3.11.0",
       "hashPath": "dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512"
+    },
+    "EO.WebBrowser/23.1.45": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dnphiHhvz+d89KjZhH+JOWHWByfOPQ76OcO3fcpKv5NrgQAIf3u0nNXOBsn75Wm6OqWMLioNnJsMH5YVfWsT1w==",
+      "path": "eo.webbrowser/23.1.45",
+      "hashPath": "eo.webbrowser.23.1.45.nupkg.sha512"
     },
     "FluentAssertions/6.2.0": {
       "type": "package",
@@ -1145,12 +1213,12 @@
       "path": "nuget.frameworks/5.11.0",
       "hashPath": "nuget.frameworks.5.11.0.nupkg.sha512"
     },
-    "NUnit/3.13.2": {
+    "NUnit/3.13.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-u+fz/lXyR4vlamySNAEMrXvh+GhAQiB6/aVZtU5WjivR5zF26Ui0tfteDtWqT90k9D8y6g8rFKYQC97Z7d195w==",
-      "path": "nunit/3.13.2",
-      "hashPath": "nunit.3.13.2.nupkg.sha512"
+      "sha512": "sha512-KNPDpls6EfHwC3+nnA67fh5wpxeLb3VLFAfLxrug6JMYDLHH6InaQIWR7Sc3y75d/9IKzMksH/gi08W7XWbmnQ==",
+      "path": "nunit/3.13.3",
+      "hashPath": "nunit.3.13.3.nupkg.sha512"
     },
     "NUnit3TestAdapter/4.1.0": {
       "type": "package",
@@ -1292,6 +1360,13 @@
       "path": "seleniumextras.waithelpers/1.0.2",
       "hashPath": "seleniumextras.waithelpers.1.0.2.nupkg.sha512"
     },
+    "SimpleAssertThat/1.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9JRaYAR9cUqYQ8Vy3hJYeqGMnPQTKKrz5eOVBcqJNcevr19RYnCr93RFoOd+8TZHDBDpjJPb5Fb1FLR0K/kieg==",
+      "path": "simpleassertthat/1.0.4",
+      "hashPath": "simpleassertthat.1.0.4.nupkg.sha512"
+    },
     "SpecFlow/3.9.74": {
       "type": "package",
       "serviceable": true,
@@ -1333,6 +1408,13 @@
       "sha512": "sha512-3QjO4jNV7PdKkmQAVp9atA+usVnKRwI3Kx1nMwJ93T0LcQfx7pKAYk0nKz5wn1oP5iqlhZuy6RXOFdhr7rDwow==",
       "path": "system.appcontext/4.1.0",
       "hashPath": "system.appcontext.4.1.0.nupkg.sha512"
+    },
+    "System.Buffers/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+      "path": "system.buffers/4.5.1",
+      "hashPath": "system.buffers.4.5.1.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
@@ -1669,6 +1751,20 @@
       "sha512": "sha512-LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    },
+    "xunit.assert/2.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pxJISOFjn2XTTi1mcDCkRZrTFb9OtRRCtx2kZFNF51GdReLr1ls2rnyxvAS4JO247K3aNtflvh5Q0346K5BROA==",
+      "path": "xunit.assert/2.4.2",
+      "hashPath": "xunit.assert.2.4.2.nupkg.sha512"
     }
   }
 }
